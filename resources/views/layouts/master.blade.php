@@ -73,7 +73,7 @@
 
         <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
     <a class="navbar-brand me-lg-5" href="#">
-        <img class="navbar-brand-dark" src="/img/brand/light.svg" alt="Volt logo" /> <img class="navbar-brand-light" src="/img/brand/dark.svg" alt="Volt logo" />
+        <img class="navbar-brand-dark" src="/img/brand/logo.jpg" alt="Volt logo" /> <img class="navbar-brand-light" src="/img/brand/dark.svg" alt="Volt logo" />
     </a>
     <div class="d-flex align-items-center">
         <button class="navbar-toggler d-lg-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -113,7 +113,7 @@
       <li class="nav-item">
         <a href="#" class="nav-link d-flex align-items-center">
           <span class="sidebar-icon">
-            <img src="/img/brand/light.svg" height="20" width="20" alt="Volt Logo">
+            <img src="/img/brand/logo.jpg" height="20" width="20" alt="Volt Logo">
           </span>
           <span class="mt-1 ms-1 sidebar-text">{{ config('app.name', 'Laravel') }}</span>
         </a>

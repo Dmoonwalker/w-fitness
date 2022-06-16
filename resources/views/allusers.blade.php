@@ -228,7 +228,7 @@
                                         </td>
                                                        
                                         <td><span class="fw-normal">
-                                        {{$subscriber->created_at}}
+                                        {{$subscriber->created_at->format('Y-M-d')}}
                                        </span></td>
                               
                                         <td>@if (isset($subscriber->status['status']))

@@ -21,7 +21,7 @@ class Subscribers extends Model
    protected $primarykey='id';
   
 
-    protected $fillable=['id','name','dob','gender','email','phone','subscribers_id'];
+    protected $fillable=['id','name','dob','gender','email','phone'];
 public function status(){
     return $this->hasOne(Subscriptions::class);
 

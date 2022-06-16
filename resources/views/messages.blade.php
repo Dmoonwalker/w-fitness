@@ -112,7 +112,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                               
-                          <h3>  <small class="text-uppercase text-muted">Secondary text</small></h3>
+                          <h3>  <small class="text-uppercase text-muted">{{$message->topic}}</small></h3>
                             </div>
                             <div class="text-end">
                               <small>{{$message->created_at}}</small>

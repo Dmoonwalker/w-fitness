@@ -5,7 +5,7 @@
 <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
-<title>Users</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="title" content="Users">
 <meta name="author" content="Themesberg">
@@ -81,7 +81,7 @@
 
         <!-- NOTICE: You can use the _analytics partial to include production code specific code & trackers -->
         
-        <nav class="navbar navbar-expand-md shadow-sm navbar-dark navbar-theme-primary px-4 col-12">
+        <nav class="navbar navbar-expand-md shadow-sm navbar-light bg-white">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}

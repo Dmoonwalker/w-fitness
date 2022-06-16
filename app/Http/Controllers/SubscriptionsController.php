@@ -7,6 +7,8 @@ use App\Models\Subscriptions;
 use	Illuminate\Support\facades\Input;
 use App\Models\Billing;
 use Illuminate\Support\Facades\Validator;
+use DateTime;
+use DateInterval;
 
 class SubscriptionsController extends Controller
 {
@@ -116,7 +118,7 @@ class SubscriptionsController extends Controller
                         ->withErrors($validator)				
                         ->withInput('errors',$errors);		
                         }
-                        try{
+                       try{
         $billing = new Billing;
         $plan = $request->input('plan');
         $billing = Billing::where('plan', '=', $plan)->first();
@@ -124,7 +126,25 @@ class SubscriptionsController extends Controller
         $status = Subscriptions::find($request->input('user_id')); 
          $status->plan = $request->input('plan');
          $status ->issue_date = $date;
-         //$status->due_date 
+        
+         $due = new DateTime($request->input('issue_date'));
+         $val;
+          if($plan == 'Gold Subscription Plan'){
+              $val = "P3M";
+          }
+            elseif($plan == 'Diamond Subscription Plan')
+           {    $val = "P1Y";}
+               elseif($plan == 'Platinum Subscription Plan')
+               {$val = "P1M";}
+                  elseif($plan == 'Flexible Subscription Plan')
+                   {  $val = "P1D";}
+                       else
+                      {   $val = "PT10M";}
+      
+      
+              $interval = new DateInterval($val);
+       $due->add($interval);
+       $status->due_date= $due;      
          $status->status = 'active';
          $status->total = $status->total + $billing->price;
         $status->amount_paid = $billing->price;

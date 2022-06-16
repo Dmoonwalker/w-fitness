@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Subscribers;
 use App\Models\Billing;
 use App\Models\Subscriptions;
+use DateTime;
+use DateInterval;
 
 class SubscribersController extends Controller
 {
@@ -74,7 +76,7 @@ class SubscribersController extends Controller
             
             $subscriber = new Subscribers;
             $subscriber->name = $fname . ' ' . $lname;
-            $subscriber->dob = '2022-12-01';
+            $subscriber->dob = $dob;
             $subscriber->gender = $gender;
             $subscriber->email = $email;
             $subscriber->phone = $phone;
@@ -154,10 +156,12 @@ class SubscribersController extends Controller
                             if($user->status = 'active'){
                                 return redirect()->to('/allusers');
                             }
+
+
     
                         }
         ///create the object and store it in database
-                    try{
+              try{
         $billing = new Billing;
         $plan = $request->input('plan');
         $billing = Billing::where('plan', '=', $plan)->first();
@@ -170,7 +174,26 @@ class SubscribersController extends Controller
          $subscription->plan = $plan;
          
          $subscription ->issue_date = $date;
-         $subscription->due_date = $date;
+         $due = new DateTime($request->input('issue_date'));
+   $val;
+    if($plan == 'Gold Subscription Plan'){
+        $val = "P3M";
+    }
+      elseif($plan == 'Diamond Subscription Plan')
+     {    $val = "P1Y";}
+         elseif($plan == 'Platinum Subscription Plan')
+         {$val = "P1M";}
+            elseif($plan == 'Flexible Subscription Plan')
+             {  $val = "P1D";}
+                 else
+                {   $val = "PT10M";}
+
+
+        $interval = new DateInterval($val);
+ $due->add($interval);
+
+         $subscription->due_date = $due->format('Y-m-d');
+ 
          $subscription->status = 'active';
         $subscription->amount_paid =$billing->price;
         $subscription->total = $subscription->total + $billing->price;

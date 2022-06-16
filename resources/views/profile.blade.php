@@ -67,6 +67,10 @@
                     <div class="profile-cover rounded-top" data-background="/img/profile-cover.jpg"></div>
                         <div class="card-body pb-5">
                             <img src="/img/team/profile-picture-1.jpg" class="avatar-xl rounded-circle mx-auto mt-n7 mb-4" alt="Neil Portrait">
+                              
+                            
+                            
+                           
                             <h4 class="h3">{{$user->name}}</h4>
                              <h5 class="fw-normal">{{$user->email}}</h5>
                             <p class="text-gray mb-4">{{$user->phone}}</p>

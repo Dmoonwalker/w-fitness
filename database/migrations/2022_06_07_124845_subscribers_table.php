@@ -14,14 +14,15 @@ class SubscribersTable extends Migration
     public function up()
     {
         Schema::create('subscribers', function (Blueprint $table) {
-            $table->integer('id')->unique();
-            $table->primary('id');
+            $table->increments('id')->unique();
             $table->string('name');
             $table->date('dob');
             $table->string('gender');
             $table->string('email')->unique();
             $table->bigInteger('phone');
             $table->timestamps();
+            
+           
           
         });
     }

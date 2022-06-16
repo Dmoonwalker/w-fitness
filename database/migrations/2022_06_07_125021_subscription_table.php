@@ -24,7 +24,7 @@ class SubscriptionTable extends Migration
             $table->integer('total');
             $table->string('status');
             $table->timestamps();
-            $table->integer('subscribers_id');
+            $table->integer('subscribers_id')->unsigned();
             $table->foreign('subscribers_id')->references('id')->on('subscribers');
         });
 

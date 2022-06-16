@@ -37,7 +37,7 @@
         <!-- NOTICE: You can use the _analytics partial to include production code specific code & trackers -->
         
 
-        <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
+        <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none" role="navigation">
     <a class="navbar-brand me-lg-5" href="#">
         <img class="navbar-brand-dark" src="/img/brand/logo.jpg" alt="Volt logo" /> <img class="navbar-brand-light" src="/img/brand/dark.svg" alt="Volt logo" />
     </a>
@@ -144,6 +144,8 @@
 
 <!-- Core -->
 @section('footerscripts')
+<script src="/js/jquery-3.6.0.min.js"></script>
+
 <script src="/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 

@@ -53,7 +53,7 @@
         <!-- NOTICE: You can use the _analytics partial to include production code specific code & trackers -->
         
 
-        <nav class="navbar navbar-dark navbar-default" role="navigation">
+        <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none">
     <a class="navbar-brand me-lg-5" href="#">
         <img class="navbar-brand-dark" src="/img/brand/logo.jpg" alt="Volt logo" /> <img class="navbar-brand-light" src="/img/brand/dark.svg" alt="Volt logo" />
     </a>
@@ -62,8 +62,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-</nav>
-<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse show" data-simplebar="init" style=""><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
+</nav><nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse show" data-simplebar="init" style=""><div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper"><div class="simplebar-height-auto-observer"></div></div><div class="simplebar-mask"><div class="simplebar-offset" style="right: 0px; bottom: 0px;"><div class="simplebar-content-wrapper" tabindex="0" role="region" aria-label="scrollable content" style="height: auto; overflow: hidden scroll;"><div class="simplebar-content" style="padding: 0px;">
 <div class="sidebar-inner px-4 pt-3">
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
@@ -164,7 +163,8 @@
       </li>
     </ul>
   </div >
-</div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 1067px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 404px; display: block; transform: translate3d(0px, 0px, 0px);"></div></div></nav>    
+</div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 1067px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: visible;"><div class="simplebar-scrollbar" style="height: 404px; display: block; transform: translate3d(0px, 0px, 0px);"></div></div></nav>
+    
 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                        
 @csrf

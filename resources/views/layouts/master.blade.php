@@ -65,7 +65,6 @@
     
 </nav>
 <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse show" data-simplebar="init" style="">
-  <div class="simplebar-wrapper" style="margin: 0px;"><div class="simplebar-height-auto-observer-wrapper">
   
   <<div class="sidebar-inner px-4 pt-3">
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -77,8 +76,8 @@
         <div class="d-block">
           <h2 class="h5 mb-3">Hi, {{ Auth::user()->name }}</h2>
           <a class="btn btn-secondary btn-sm d-inline-flex align-items-center" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+          onclick="event.preventDefault();
+        document.getElementById('logout-form').submit();">
                                    
             <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
             Sign Out
@@ -167,7 +166,7 @@
       </li>
     </ul>
   </div >
-</div>
+
 </nav>
     
 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -185,6 +184,8 @@
 
 <!-- Core -->
 @section('footerscripts')
+
+<script src="/js/jquery-3.6.0.min.js"></script>
 <script src="/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
@@ -224,7 +225,6 @@
 
 <!-- Volt JS -->
 <script src="/js/volt.js"></script>
-<script src="/js/jquery-3.6.0.min.js"></script>
 
 @show
 </body>

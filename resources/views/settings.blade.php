@@ -52,6 +52,16 @@
                             <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 2h10v7h-2l-1 2H8l-1-2H5V5z" clip-rule="evenodd"></path></svg>
                             Messages
                           </a>
+                          
+                          <div role="separator" class="dropdown-divider my-1"></div>
+                          <a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                   
+                            <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                
+                            Logout
+                          </a>
+                        </div>
                       
                         </div>
                       </li>
@@ -60,8 +70,8 @@
                 </div>
               </nav>
               
-            <div class="row">
-                <div class="col-12 col-xl-8">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-xl-10 col-sm-12">
                     <div class="card card-body border-0 shadow mb-4">
                         <h2 class="h2 text-secondary mb-0 mb-4">Billing Settings</h2>
                         <div class="table-responsive">
@@ -115,7 +125,8 @@
 </form>
                     </div>
                     </div>
-                    <div class="col-md-12 col-xl-8 col-sm-12">
+                    <div class="row justify-content-center">
+                    <div class="col-md-12 col-xl-10 col-sm-12">
                     <div class="card card-body border-0 shadow mb-4 mb-xl-6">
                         <h2 class="h2 text-secondary mb-0 mb-4">Notification Settings</h2>
                         <ul class="list-group list-group-flush">
@@ -135,14 +146,12 @@
                     </div>
                 </div>
               
-              
+</div>
             </div>
      
             @endsection
    
    @section('footer')           
-<footer class="bg-white rounded shadow p-5 mb-4 mt-4">
-</footer>
    @endsection
    @section('footerscripts')           
        @parent

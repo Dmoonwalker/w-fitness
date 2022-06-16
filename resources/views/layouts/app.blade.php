@@ -1,13 +1,30 @@
 
+<!--
+
+=========================================================
+* Volt Pro - Premium Bootstrap 5 Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2021 Themesberg (https://www.themesberg.com)
+* License (https://themes.getbootstrap.com/licenses/)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
-
+<title>{{ config('app.name', 'Laravel') }}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="title" content="Users">
+<meta name="title" content="Volt Premium Bootstrap Dashboard - Sign in page">
 <meta name="author" content="Themesberg">
 <meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
 <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, themesberg, themesberg dashboard, themesberg admin dashboard" />
@@ -16,173 +33,103 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://demo.themesberg.com/volt-pro">
-<meta property="og:title" content="Volt - Free Bootstrap 5 Dashboard">
+<meta property="og:title" content="Volt Premium Bootstrap Dashboard - Sign in page">
 <meta property="og:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
 <meta property="og:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://demo.themesberg.com/volt-pro">
-<meta property="twitter:title" content="Volt - Free Bootstrap 5 Dashboard">
+<meta property="twitter:title" content="Volt Premium Bootstrap Dashboard - Sign in page">
 <meta property="twitter:description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard featuring over 800 components, 10+ plugins and 20 example pages using Vanilla JS.">
 <meta property="twitter:image" content="https://themesberg.s3.us-east-2.amazonaws.com/public/products/volt-pro-bootstrap-5-dashboard/volt-pro-preview.jpg">
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-<link rel="manifest" href="/img/favicon/site.webmanifest">
-<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#ffffff">
+<link rel="apple-touch-icon" sizes="120x120" href="../../assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../assets/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#ffffff">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-
-<!-- Sweet Alert -->
-<link type="text/css" href="/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
-
-<!-- Notyf -->
-<link type="text/css" href="/vendor/notyf/notyf.min.css" rel="stylesheet">
-
-<!-- Volt CSS -->
-<link type="text/css" href="/css/volt.css" rel="stylesheet">
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>{{ config('app.name', 'Laravel') }}</title>
+<!-- Sweet Alert -->
+<link type="text/css" href="../../vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
 
-<!-- Scripts -->
-<script src="{{ asset('js/app.js') }}" defer></script>
+<!-- Notyf -->
+<link type="text/css" href="../../vendor/notyf/notyf.min.css" rel="stylesheet">
 
-<!-- Fonts -->
-<link rel="dns-prefetch" href="//fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+<!-- Volt CSS -->
+<link type="text/css" href="../../css/volt.css" rel="stylesheet">
 
-<!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+<!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
 
-<!-- NOTICE: You can use the _analytics partial to include production code specific code & trackers -->
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
-<body  data-background-lg="img/illustrations/signin.svg"  style="background: url(&quot;img/illustrations/signin.svg&quot;);">
-     
+<body>
 
-        <!-- NOTICE: You can use the _analytics partial to include production code specific code & trackers -->
-        
-        <nav class="navbar navbar-expand-md shadow-sm navbar-light bg-white">
+    <!-- NOTICE: You can use the _analytics.html partial to include production code specific code & trackers -->
+    
+
+    <main>
+
+        <!-- Section -->
+        <section class="vh-lg-100 mt-5 mt-lg-0 bg-soft d-flex align-items-center">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <div id="app" >
-        <main class="py-4">
-            @yield('content')
-        </main>
+                <p class="text-center">
+                    <a href="/login" class="d-flex align-items-center justify-content-center">
+                        <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+                        Back to homepage
+                    </a>
+                </p>
+                
+<div class="row justify-content-center form-bg-image" data-background-lg="/img/illustrations/signin.svg" style="background: url('/img/illustrations/signin.svg');">
+    
+                @yield('content')
 </div>
-
-<!-- Core -->
-<script src="/vendor/@popperjs/core/dist/umd/popper.min.js"></script>
-<script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Core -->
+<script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Vendor JS -->
-<script src="/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
 
 <!-- Slider -->
-<script src="/vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="../../vendor/nouislider/distribute/nouislider.min.js"></script>
 
 <!-- Smooth scroll -->
-<script src="/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../../vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 
 <!-- Charts -->
-<script src="/vendor/chartist/dist/chartist.min.js"></script>
-<script src="/vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
+<script src="../../vendor/chartist/dist/chartist.min.js"></script>
+<script src="../../vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js"></script>
 
 <!-- Datepicker -->
-<script src="/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+<script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
 <!-- Sweet Alerts 2 -->
-<script src="/vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="../../vendor/sweetalert2/dist/sweetalert2.all.min.js"></script>
 
 <!-- Moment JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
 
 <!-- Vanilla JS Datepicker -->
-<script src="/vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
+<script src="../../vendor/vanillajs-datepicker/dist/js/datepicker.min.js"></script>
 
 <!-- Notyf -->
-<script src="/vendor/notyf/notyf.min.js"></script>
+<script src="../../vendor/notyf/notyf.min.js"></script>
 
 <!-- Simplebar -->
-<script src="/vendor/simplebar/dist/simplebar.min.js"></script>
+<script src="../../vendor/simplebar/dist/simplebar.min.js"></script>
 
 <!-- Github buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- Volt JS -->
-<script src="/js/volt.js"></script>
-<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="../../assets/js/volt.js"></script>
 
+    
 </body>
 
 </html>

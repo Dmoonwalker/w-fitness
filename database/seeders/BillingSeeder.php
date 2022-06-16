@@ -16,28 +16,28 @@ class BillingSeeder extends Seeder
     {
         Billing::create([
             'plan' => 'Diamond Subscription Plan',
-            'Duration' => 'Annualy',
+            'duration' => 'Annualy',
             'Price' => '150000'
 
         ]);
         
         Billing::create([
             'plan' => 'Gold Subscription Plan',
-            'Duration' => 'Quarterly',
+            'duration' => 'Quarterly',
             'Price' => '80000'
             
         ]);
         
         Billing::create([
             'plan' => 'Platinum Subscription Plan',
-            'Duration' => 'Monthly',
+            'duration' => 'Monthly',
             'Price' => '50000'
             
         ]);
         
         Billing::create([
             'plan' => 'Flexible Subscription Plan',
-            'Duration' => 'Daily',
+            'duration' => 'Daily',
             'Price' => '5000'
             
         ]);

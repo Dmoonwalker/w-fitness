@@ -54,9 +54,7 @@
         
 
         <nav class="navbar navbar-dark navbar-default navbar-inverse col-12 d-lg-none" role="navigation">
-   <div class="container-fluid">
-    <div class="navbar-header">
-        <a class="navbar-brand me-lg-5" href="#">
+    <a class="navbar-brand me-lg-5" href="#">
         <img class="navbar-brand-dark" src="/img/brand/logo.jpg" alt="Volt logo" /> <img class="navbar-brand-light" src="/img/brand/dark.svg" alt="Volt logo" />
     </a>
     <div class="d-flex align-items-center">
@@ -64,8 +62,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
     </div>
-</div>
-<div class="collapse navbar-collapse" role="navigation">
+
 
         <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
@@ -169,7 +166,7 @@
       </li>
     </ul>
   </div >
-</div>
+
 </nav>
     
 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

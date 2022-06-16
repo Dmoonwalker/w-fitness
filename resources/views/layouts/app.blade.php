@@ -83,11 +83,9 @@
                         Back to homepage
                     </a>
                 </p>
-                
-<div class="row justify-content-center form-bg-image" data-background-lg="/img/illustrations/signin.svg" style="background: url('/img/illustrations/signin.svg');">
-    
+        
                 @yield('content')
-</div>
+
     <!-- Core -->
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>

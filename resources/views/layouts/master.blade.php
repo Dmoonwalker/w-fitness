@@ -1,4 +1,4 @@
-*<!--
+<!--
 
 =========================================================
 * Volt Free - Bootstrap 5 Dashboard
@@ -53,7 +53,7 @@
         <!-- NOTICE: You can use the _analytics partial to include production code specific code & trackers -->
         
 
-        <nav class="navbar navbar-dark navbar-theme-primary px-4 col-12 d-lg-none" role="navigation">
+        <nav class="navbar navbar-default navbar-dark navbar-theme-primary px-4 col-12 d-lg-none" role="navigation">
     <a class="navbar-brand me-lg-5" href="#">
         <img class="navbar-brand-dark" src="/img/brand/logo.jpg" alt="Volt logo" /> <img class="navbar-brand-light" src="/img/brand/dark.svg" alt="Volt logo" />
     </a>
@@ -64,9 +64,9 @@
     </div>
     
 </nav>
-<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse show" data-simplebar="init" style="">
+<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white navbar-collapse collapse" data-simplebar="init" style="">
   
-  <<div class="sidebar-inner px-4 pt-3">
+  <div class="sidebar-inner px-4 pt-3">
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
@@ -115,7 +115,7 @@
             <span class="sidebar-icon">
                 <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path><path fill-rule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clip-rule="evenodd"></path></svg>
               </span>
-          <span class="sidebar-text">Manage</span>
+          <span class="sidebar-text">Manage Subscriptions</span>
         </a>
       </li>
       <li  <?php if (basename($_SERVER['PHP_SELF']) == 'allusers') echo 'class=" nav-item active"'; else echo 'class="nav-item"'; ?>>
@@ -123,7 +123,7 @@
             <span class="sidebar-icon">
                 <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
               </span> 
-          <span class="sidebar-text">Membership</span>
+          <span class="sidebar-text">Manage Members</span>
         </a>
       </li>
      <li <?php if (basename($_SERVER['PHP_SELF']) == 'settings') echo 'class=" nav-item active"'; else echo 'class="nav-item"'; ?>>

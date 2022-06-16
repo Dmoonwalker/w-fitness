@@ -17,9 +17,9 @@ class SubscriptionsFactory extends Factory
             'name' => $this->faker->name(),
             'issue_date' => now(),
             'due_date' => 'male',
-            'phone' => $this->$faker->numerify('##########'),
-            'amount_paid' => $this->$faker->numerify('######'),
-            'total' => $this->$faker->numerify('######'),
+            'phone' => $this->faker->numerify('##########'),
+            'amount_paid' => $this->faker->numerify('######'),
+            'total' => $this->faker->numerify('######'),
               'status' => 'active',
             'plan' => Str::random(10),
         
